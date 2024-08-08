@@ -2,7 +2,9 @@
 
 ## Information
 
-This project is an unofficial port of the MacOS version of Zalo to Linux. The porting process involved extracting the `.dmg` file from the MacOS version and locating the `app.asar` file in the directory, which is typically found in `/Applications/YourAppName.app/Contents/Resources`. The following steps were taken:
+THIS IS NOT USING THE ZALO WEBSITE,IT IS PORTED DIRECTLY FROM THE ZALO DESKTOP CLIENT
+
+This project is an unofficial port of the MacOS version of Zalo to Linux. Tis port includes all features of a normal desktop Zalo client. The porting process involved extracting the `.dmg` file from the MacOS version and locating the `app.asar` file in the directory, which is typically found in `/Applications/YourAppName.app/Contents/Resources`. The following steps were taken:
 
 1. Extracted `app.asar` with the command:
     ```bash
