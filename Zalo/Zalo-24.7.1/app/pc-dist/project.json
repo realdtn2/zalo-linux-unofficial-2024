@@ -1,0 +1,9 @@
+{
+    "debugMode"     : 1,
+    "frameRate"     : 60,
+    "id"            : "cocos-layer",
+    "renderMode"    : 2,
+    "showFPS" 		: false,
+    "jsList"        : [
+    ]
+}

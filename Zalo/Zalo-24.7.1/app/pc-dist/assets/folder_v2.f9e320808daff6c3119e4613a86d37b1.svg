@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="45px" viewBox="0 0 52 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Folder</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="3.22660766%" x2="50%" y2="98.7392014%" id="linearGradient-1">
+            <stop stop-color="#FFF772" offset="0%"></stop>
+            <stop stop-color="#F1D200" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Photo-View" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Folder-view" transform="translate(-464.000000, -565.000000)">
+            <g id="Folder" transform="translate(464.000000, 565.000000)">
+                <g id="Group-22">
+                    <rect id="Rectangle-6" fill="#FFAB00" x="3.03333333" y="5.29411765" width="42.9" height="23.3823529" rx="1.8"></rect>
+                    <path d="M26,9.70588235 L48.04,9.70588235 C50.2270476,9.70588235 52,11.4788347 52,13.6658824 L52,41.04 C52,43.2270476 50.2270476,45 48.04,45 L3.96,45 C1.77295239,45 -2.39669917e-15,43.2270476 -2.66453526e-15,41.04 L4.4408921e-16,13.6658824 L-4.4408921e-16,3.96 C-7.11925295e-16,1.77295239 1.77295239,-3.59504876e-15 3.96,-3.99680289e-15 L22.04,-3.99680289e-15 C24.2270476,-2.45606853e-15 26,1.77295239 26,3.96 L26,9.70588235 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

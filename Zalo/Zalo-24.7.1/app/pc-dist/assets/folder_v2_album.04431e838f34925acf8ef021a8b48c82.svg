@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="45px" viewBox="0 0 52 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="3.22660766%" x2="50%" y2="98.7392014%" id="linearGradient-1">
+            <stop stop-color="#FFF772" offset="0%"></stop>
+            <stop stop-color="#F1D200" offset="100%"></stop>
+        </linearGradient>
+        <path d="M20,-3.74998308e-08 L1.99999995,-3.74998308e-08 C0.999999954,-3.74998308e-08 -4.58333318e-08,0.999999963 -4.58333318e-08,1.99999996 L-4.58333318e-08,16 C-4.58333318e-08,17.1 0.899999958,18 1.99999995,18 L20,18 C21,18 22,17 22,16 L22,1.99999996 C22,0.999999963 21,-3.74998308e-08 20,-3.74998308e-08 L20,-3.74998308e-08 Z M13.8571429,8 L19,15 L3.00000003,15 L7.00000003,9.75 L9.85714289,13.2616667 L13.8571429,8 Z M17,3 C18.1045695,3 19,3.8954305 19,5 C19,6.1045695 18.1045695,7 17,7 C15.8954305,7 15,6.1045695 15,5 C15,3.8954305 15.8954305,3 17,3 Z" id="path-2"></path>
+    </defs>
+    <g id="FolderPhoto" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Folder-view-Copy" transform="translate(-466.000000, -565.000000)">
+            <g id="Group-18" transform="translate(466.000000, 565.000000)">
+                <g id="Folder">
+                    <rect id="Rectangle-6" fill="#FFAB00" x="3.03333333" y="5.29411765" width="42.9" height="23.3823529" rx="1.8"></rect>
+                    <path d="M0,3.96 C-7.11925295e-16,1.77295239 1.77295239,-4.23350817e-17 3.96,0 L22.04,0 C24.2270476,1.09664515e-15 26,1.77295239 26,3.96 L26,9.705 L48.04,9.70588235 C50.2270476,9.70588235 52,11.4788347 52,13.6658824 L52,41.04 C52,43.2270476 50.2270476,45 48.04,45 L3.96,45 C1.77295239,45 -2.39669917e-15,43.2270476 0,41.04 L0,3.96 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                </g>
+                <g id="photo_size_select_actual" transform="translate(14.000000, 18.000000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Icon" fill="#FFAB00" fill-rule="nonzero" opacity="0.562593006" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
