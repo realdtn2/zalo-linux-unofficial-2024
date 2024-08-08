@@ -20,8 +20,10 @@ Additionally, `install.sh` is used to add a tray icon using Python.
 Working on Nobara 39 KDE Plasma,Ubuntu 22.04 XFCE4
 
 ![Screenshot_20240809_053634](https://github.com/user-attachments/assets/cad8e69c-a5ea-47a5-bfba-7f75bba9ca4f)
+![Screenshot_20240809_054034](https://github.com/user-attachments/assets/f145e10a-10f9-4bd2-a91e-24f06f0f9bf3)
 
 ![Screenshot_20240809_053806](https://github.com/user-attachments/assets/cb7674e3-a856-42a9-9b78-c4ca93fd6f3b)
+![Screenshot_20240809_053944](https://github.com/user-attachments/assets/781ddbd0-9404-4666-ab77-eeb8f8596a7a)
 
 
 
