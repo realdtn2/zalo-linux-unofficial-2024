@@ -14,7 +14,8 @@ This project is an unofficial port of the MacOS version of Zalo to Linux. The po
     ```
 
 Additionally, `install.sh` is used to add a tray icon using Python.
-Have only tested on KDE Plasma 6
+
+Working on Nobara 39 KDE Plasma,Ubuntu 22.04 XFCE4
 
 ## Installation
 
@@ -29,6 +30,12 @@ chmod +x install.sh
 ./install.sh
 ```
 This will install Zalo to ~/.local/share/Zalo.
+
+## Fixes
+
+If you encounter "Python3: Namespace AppIndicator3 not available" on ubuntu/debian
+
+Run "sudo apt install gir1.2-appindicator3-0.1"
 
 ## Bugs
 
