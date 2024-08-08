@@ -14,6 +14,7 @@ This project is an unofficial port of the MacOS version of Zalo to Linux. The po
     ```
 
 Additionally, `install.sh` is used to add a tray icon using Python.
+Have only tested on KDE Plasma 6
 
 ## Installation
 
