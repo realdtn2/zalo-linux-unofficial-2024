@@ -31,7 +31,7 @@ menu = Menu(
 )
 
 # Create the tray icon
-icon = Icon("Custom Tray Icon", image, "Tray Icon", menu)
+icon = Icon("Custom Tray Icon", image, "Zalo", menu)
 
 # Run the icon
 icon.run()
