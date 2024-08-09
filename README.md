@@ -44,9 +44,15 @@ This will install Zalo to ~/.local/share/Zalo.
 
 ## Fixes
 
-If you encounter "Python3: Namespace AppIndicator3 not available" on ubuntu/debian
-
-Run "sudo apt install gir1.2-appindicator3-0.1"
+## ***"Python3: Namespace AppIndicator3 not available" on ubuntu/debian***
+```bash
+sudo apt install gir1.2-appindicator3-0.1
+```
+## ***[855265:0809/185712.193181:FATAL:setuid_sandbox_host.cc(157)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /home/ubuntu/.local/share/Zalo/electron-v22.3.27-linux-x64/chrome-sandbox is owned by root and has mode 4755.***
+```bash
+sudo chown root $HOME/.local/share/Zalo/electron-v22.3.27-linux-x64/chrome-sandbox
+sudo chmod 4755 $HOME/.local/share/Zalo/electron-v22.3.27-linux-x64/chrome-sandbox
+```
 
 ## Bugs
 
