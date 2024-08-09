@@ -1,0 +1,4 @@
+provider: generic
+url: http://localhost:3001
+channel: latest
+updaterCacheDirName: zalo-updater

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="54px" viewBox="0 0 43 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>folder</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="31.2907126%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFE586" offset="0%"></stop>
+            <stop stop-color="#FBD748" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="folder" transform="translate(22.000000, 26.500000) scale(1, -1) translate(-22.000000, -26.500000) " fill-rule="nonzero">
+            <polygon id="Rectangle-2" fill="#FFC560" points="0 0 43.699453 0 43.699453 17.4504085 39.523207 22.0889537 39.523207 52.3896814 0 52.3896814"></polygon>
+            <polygon id="Rectangle" fill="url(#linearGradient-1)" points="0 0 35.4288039 0 35.4288039 17.8829779 39.6527405 21.9700839 39.6527405 52.6300011 0 52.6300011"></polygon>
+        </g>
+    </g>
+</svg>

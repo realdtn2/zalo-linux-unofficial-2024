@@ -2,14 +2,133 @@
 
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 
+choose_language() {
+    echo "Select language / Chọn ngôn ngữ:"
+    echo "1) English"
+    echo "2) Tiếng Việt"
+    read -p "Enter your choice / Nhập lựa chọn của bạn (1 or 2): " lang_choice
+
+    case $lang_choice in
+        1)
+            LANGUAGE="EN"
+            ;;
+        2)
+            LANGUAGE="VI"
+            ;;
+        *)
+            echo "Invalid choice. Please select 1 or 2."
+            echo "Lựa chọn không hợp lệ. Vui lòng chọn 1 hoặc 2."
+            choose_language
+            ;;
+    esac
+}
+choose_language
+
+install_menu() {
+    while true; do
+        if [ "$LANGUAGE" == "EN" ]; then
+            echo "Select the version of Zalo to install:"
+            echo "1) Zalo"
+            echo "2) Zalo-ZaDark"
+            read -p "Enter your choice (1 or 2): " choice
+        else
+            echo "Chọn phiên bản Zalo để cài đặt:"
+            echo "1) Zalo"
+            echo "2) Zalo-ZaDark"
+            read -p "Nhập lựa chọn của bạn (1 hoặc 2): " choice
+        fi
+
+        case $choice in
+            1)
+                install_zalo
+                ;;
+            2)
+                install_zalozadark
+                ;;
+            *)
+                if [ "$LANGUAGE" == "EN" ]; then
+                    echo "Invalid choice. Please select 1 or 2."
+                else
+                    echo "Lựa chọn không hợp lệ. Vui lòng chọn 1 hoặc 2."
+                fi
+                ;;
+        esac
+    done
+}
+
 install_zalo() {
-    echo "Installing Zalo..."
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Installing Electron v22.3.27..."
+    else
+        echo "Đang cài đặt Electron v22.3.27..."
+    fi
+    rm Zalo/electron-v22.3.27-linux-x64.zip
+    rm -rf Zalo/electron-v22.3.27-linux-x64
+    wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P Zalo
+    unzip Zalo/electron-v22.3.27-linux-x64.zip -d Zalo/electron-v22.3.27-linux-x64
+    rm Zalo/electron-v22.3.27-linux-x64.zip
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Installed Electron v22.3.27!"
+        echo "Installing Zalo..."
+    else
+        echo "Đã cài đặt Electron v22.3.27!"
+        echo "Đang cài đặt Zalo..."
+    fi
     mkdir -p $HOME/.local/share/
+    if [ "$LANGUAGE" == "EN" ]; then
+        rm ./Zalo/main.py
+        cp ./en/main.py ./Zalo/
+    else
+        rm ./Zalo/main.py
+        cp ./vn/main.py ./Zalo/
+    fi
     cp -r ./Zalo $HOME/.local/share/
     sed -i "s|\$HOME|$HOME|g" "./prepare/Zalo.desktop"
     cp -r ./prepare/Zalo.desktop $HOME/.local/share/applications
     cp -r ./prepare/Zalo.desktop $HOME/Desktop
-    echo "Installed Zalo!"
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Installed Zalo!"
+    else
+        echo "Đã cài đặt Zalo!"
+    fi
+    exit 1
+}
+
+install_zalozadark() {
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Installing Electron v22.3.27..."
+    else
+        echo "Đang cài đặt Electron v22.3.27..."
+    fi
+    rm ZaloZaDark/electron-v22.3.27-linux-x64.zip
+    rm -rf ZaloZaDark/electron-v22.3.27-linux-x64
+    wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P ZaloZaDark
+    unzip ZaloZaDark/electron-v22.3.27-linux-x64.zip -d ZaloZaDark/electron-v22.3.27-linux-x64
+    rm ZaloZaDark/electron-v22.3.27-linux-x64.zip
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Installed Electron v22.3.27!"
+        echo "Installing ZaloZaDark..."
+    else
+        echo "Đã cài đặt Electron v22.3.27!"
+        echo "Đang cài đặt ZaloZaDark..."
+    fi
+    mkdir -p $HOME/.local/share/
+    if [ "$LANGUAGE" == "EN" ]; then
+        rm ./ZaloZaDark/main.py
+        cp ./en/main.py ./ZaloZaDark/
+    else
+        rm ./ZaloZaDark/main.py
+        cp ./vn/main.py ./ZaloZaDark/
+    fi
+    cp -r ./ZaloZaDark $HOME/.local/share/Zalo
+    sed -i "s|\$HOME|$HOME|g" "./prepare/Zalo.desktop"
+    cp -r ./prepare/Zalo.desktop $HOME/.local/share/applications
+    cp -r ./prepare/Zalo.desktop $HOME/Desktop
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Installed ZaloZaDark!"
+    else
+        echo "Đã cài đặt ZaloZaDark!"
+    fi
     exit 1
 }
 
@@ -18,58 +137,94 @@ command_exists() {
 }
 
 install_dependencies() {
-    echo 'Installing dependencies...'
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo 'Installing dependencies...'
+    else
+        echo 'Đang cài đặt các phụ thuộc...'
+    fi
     if command_exists pip ; then
         pip install pystray pillow
     else
         pip3 install pystray pillow
     fi
-    wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P Zalo
-    unzip Zalo/electron-v22.3.27-linux-x64.zip -d Zalo/electron-v22.3.27-linux-x64
-    rm Zalo/electron-v22.3.27-linux-x64.zip
-    echo 'Installed dependencies!'
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo 'Installed dependencies!'
+    else
+        echo 'Đã cài đặt các phụ thuộc!'
+    fi
 }
 
 if ! command_exists python && ! command_exists python3; then
-    echo "Python is not installed. Do you want to install now? (y/n):"
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Python is not installed. Do you want to install now? (y/n):"
+    else
+        echo "Python chưa được cài đặt. Bạn có muốn cài đặt bây giờ không? (y/n):"
+    fi
     read -r response
 
     if [ "$response" = "y" ]; then
-        echo "Proceeding with the installation..."
+        if [ "$LANGUAGE" == "EN" ]; then
+            echo "Proceeding with the installation..."
+        else
+            echo "Đang tiếp tục cài đặt..."
+        fi
     else
-        echo "Installation aborted."
+        if [ "$LANGUAGE" == "EN" ]; then
+            echo "Installation aborted."
+        else
+            echo "Đã hủy cài đặt."
+        fi
         exit 1
     fi
 else
-    echo "Python is installed."
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Python is installed."
+    else
+        echo "Python đã được cài đặt."
+    fi
     install_dependencies
-    install_zalo
+    install_menu
 fi
 
 
 install_python_debian_ubuntu() {
-    echo '*** Installing Python on Debian/Ubuntu...'
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo '*** Installing Python on Debian/Ubuntu...'
+    else
+        echo '*** Đang cài đặt Python trên Debian/Ubuntu...'
+    fi
     sudo apt-get update -y
     sudo apt-get install -y python3 python3-pip
 }
 
 install_python_fedora() {
-    echo '*** Installing Python on Fedora...'
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo '*** Installing Python on Fedora...'
+    else
+        echo '*** Đang cài đặt Python trên Fedora...'
+    fi
     sudo dnf install -y python3 python3-pip
 }
 
 install_python_centos() {
-    echo '*** Installing Python on CentOS/RHEL/RedHat-based...'
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo '*** Installing Python on CentOS/RHEL/RedHat-based...'
+    else
+        echo '*** Đang cài đặt Python trên CentOS/RHEL/RedHat-based...'
+    fi
     sudo yum install -y python3 python3-pip
 }
 
 if [ ! -f /etc/os-release ]; then
-    echo '*** Cannot detect Linux distribution! Aborting.'
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo '*** Cannot detect Linux distribution! Aborting.'
+    else
+        echo '*** Không thể phát hiện bản phân phối Linux! Hủy bỏ.'
+    fi
     exit 1
 fi
 
 source /etc/os-release
-
 
 if [ "$ID" == "debian" ] || [ "$ID" == "ubuntu" ]; then
     install_python_debian_ubuntu
@@ -78,15 +233,21 @@ elif [ "$ID" == "fedora" ]; then
 elif [ "$ID" == "centos" ] || [ "$ID" == "rhel" ] || [ "$ID" == "rocky" ] || [ "$ID" == "almalinux" ] || [ "$ID" == "nobara" ]; then
     install_python_centos
 else
-    echo "Unsupported distribution $ID"
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Unsupported distribution $ID"
+    else
+        echo "Bản phân phối không được hỗ trợ $ID"
+    fi
     exit 1
 fi
 
-echo
-echo '*** Python installation complete!'
+if [ "$LANGUAGE" == "EN" ]; then
+    echo
+    echo '*** Python installation complete!'
+else
+    echo
+    echo '*** Cài đặt Python hoàn tất!'
+fi
+
 install_dependencies
-install_zalo
-
-
-
-
+install_menu

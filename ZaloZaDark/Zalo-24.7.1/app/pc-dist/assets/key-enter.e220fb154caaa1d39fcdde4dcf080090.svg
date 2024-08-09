@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41" height="22" viewBox="0 0 41 22">
+    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+        <rect width="39" height="20" fill="#F4F5F7" stroke="#B3BAC5" rx="2" transform="rotate(-180 19.5 10)"/>
+        <text fill="#767676" font-family="SegoeUI, Segoe UI" font-size="13">
+            <tspan x="5" y="15">Enter</tspan>
+        </text>
+    </g>
+</svg>

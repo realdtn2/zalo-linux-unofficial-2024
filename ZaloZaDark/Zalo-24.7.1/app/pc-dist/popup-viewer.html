@@ -1,0 +1,24 @@
+<!doctype html><html lang="en" style="background-color: rgba(0, 0, 0, 0.6); height: 100vh"><head><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://*.zaloapp.com https://*.zdn.vn https://*.zadn.vn https://*.dropboxapi.com https://*.google.com https://www.google-analytics.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://*.zadn.vn https://*.zdn.vn blob:;manifest-src 'self' 'unsafe-inline' https://*.zalo.me;font-src * data:; img-src * data: blob: zfile: file:; media-src * blob: zfile: file:; connect-src 'self' https://*.dlfl.me https://*.dlmd.me https://*.mdchat.me https://*.zavi.me https://*.doubleclick.net https://*.google-analytics.com wss://*.zavi.me wss://*.chat.zalo.me https://*.zalo.me https://*.zdn.vn https://*.zadn.vn https://*.z-cdn.me https://*.zaloapp.com https://*.zing.vn https://*.dropboxapi.com https://*.google.com https://www.microsoft.com https://www.apple.com https://*.baomoi.com https://*.zingtv.vn https://*.zingmp3.vn zingmp3.vn blob:; child-src 'self' https://*.zapps.vn https://*.baomoi.com https://*.zingmp3.com https://*.zingmp3.vn https://zingmp3.vn https://www.facebook.com https://*.zalo.me https://*.google.com https://*.youtube.com https://*.googleapis.com https://*.zing.vn https://*.zdn.vn https://*.zadn.vn https://*.zaloapp.com https://*.soundcloud.com https://*.live.com blob:"><meta name="viewport" content="width=device-width,minimum-scale=1"/><meta name="google" content="notranslate"/><meta name="viewport" content="width=device-width,minimum-scale=1"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta charset="utf-8"/><meta http-equiv="cache-control" content="max-age=2147483647"/><meta property="og:image" content="https://stc-chat.zdn.vn/images/banner/zalo-thumb-link.png"/><meta name="description" content="Xem ảnh trên Zalo"/><title>Popup Viewer</title><link id="favico" rel="icon" type="image/png" href="/favicon-96x96.v1.png"/><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"/><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"/><meta name="robots" content="noindex"/></head><body style="padding:0px;margin:0px;overflow:hidden;background-color:rgba(58, 60, 61, 0.9);user-select: none;"><noscript>You must enable script to view photo!</noscript><script>const __ZaBUNDLENAME__ = 'popup-viewer-pc';
+			if (__ZaBUNDLENAME__ === 'popup-viewer-web') {
+				const isLoadPhotoSuccess = (i) => {
+					var exit = true;
+					Array.prototype.forEach.call(document.getElementsByTagName('div'), (element) => {
+						element.id = element.id || '';
+						if (element.id.includes('zalo_popup')) exit = false;
+					});
+					if (exit) {
+						if (window.close && typeof window.close == 'function') {
+							if (i > 2) window.close();
+							else setTimeout(() => isLoadPhotoSuccess(i + 1), 500);
+						}
+					}
+				};
+				const domainRegex = /^(?:https?:)?(?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/;
+				const result =
+					document.referrer && typeof document.referrer == 'string'
+						? document.referrer.match(domainRegex)
+						: [];
+				if (result.length !== 2 || !result[1].includes('chat.zalo.me') || !window.opener) {
+					window.open('https://chat.zalo.me', '_self');
+				} else isLoadPhotoSuccess(0);
+			}</script></body></html>

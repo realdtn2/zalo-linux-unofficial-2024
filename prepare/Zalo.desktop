@@ -1,8 +1,8 @@
 [Desktop Entry]
 Comment=
 Name=Zalo
-Exec=bash $HOME/.local/share/Zalo/start.sh
-Icon=$HOME/.local/share/Zalo/assets/Zalo.png
+Exec=bash /home/realdtn/.local/share/Zalo/start.sh
+Icon=/home/realdtn/.local/share/Zalo/assets/Zalo.png
 Terminal=false
 Type=Application
 Version=24.7.1

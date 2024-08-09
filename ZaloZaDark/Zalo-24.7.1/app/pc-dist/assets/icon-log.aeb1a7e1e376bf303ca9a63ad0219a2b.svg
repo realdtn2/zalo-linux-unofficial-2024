@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="52px" viewBox="0 0 42 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_file_text</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="File_Type_Solid" transform="translate(-263.000000, -227.000000)">
+            <g id="icon_file_text" transform="translate(263.000000, 227.000000)">
+                <path d="M27.937,0 L42,14.063 L42,48 C42,50.209 40.209,52 38,52 L4,52 C1.791,52 0,50.209 0,48 L0,4 C0,1.791 1.791,0 4,0 L27.937,0 Z" id="Page-1" fill="#01ADEE"></path>
+                <path d="M40,48 C40,49.105 39.104,50 38,50 L4,50 C2.895,50 2,49.105 2,48 L2,4 C2,2.895 2.895,2 4,2 L27,2 L40,15 L40,48 Z M27.938,0 L4,0 C1.791,0 0,1.791 0,4 L0,48 C0,50.209 1.791,52 4,52 L38,52 C40.209,52 42,50.209 42,48 L42,14.062 L27.938,0 Z" id="Fill-1" fill="#01ADEE"></path>
+                <path d="M9,21.85 L33,21.85 C33.6351275,21.85 34.15,22.3648725 34.15,23 C34.15,23.6351275 33.6351275,24.15 33,24.15 L9,24.15 C8.36487254,24.15 7.85,23.6351275 7.85,23 C7.85,22.3648725 8.36487254,21.85 9,21.85 Z" id="Rectangle" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M9,29.35 L33,29.35 C33.6351275,29.35 34.15,29.8648725 34.15,30.5 C34.15,31.1351275 33.6351275,31.65 33,31.65 L9,31.65 C8.36487254,31.65 7.85,31.1351275 7.85,30.5 C7.85,29.8648725 8.36487254,29.35 9,29.35 Z" id="Rectangle-Copy" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M9,36.85 L33,36.85 C33.6351275,36.85 34.15,37.3648725 34.15,38 C34.15,38.6351275 33.6351275,39.15 33,39.15 L9,39.15 C8.36487254,39.15 7.85,38.6351275 7.85,38 C7.85,37.3648725 8.36487254,36.85 9,36.85 Z" id="Rectangle-Copy-2" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <polygon id="Rectangle-2-Copy" fill="#5ECDF7" points="28 0 42 14 28 14"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
