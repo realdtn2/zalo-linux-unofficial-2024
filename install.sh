@@ -57,35 +57,41 @@ install_menu() {
 }
 
 install_zalo() {
+    rm -rf /tmp/zalo-installer
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Installing Zalo..."
+    else
+        echo "Đang cài đặt Zalo..."
+    fi
+    mkdir -p $HOME/.local/share/
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Installing Electron v22.3.27..."
     else
         echo "Đang cài đặt Electron v22.3.27..."
     fi
-    rm Zalo/electron-v22.3.27-linux-x64.zip
-    rm -rf Zalo/electron-v22.3.27-linux-x64
-    wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P Zalo
-    unzip Zalo/electron-v22.3.27-linux-x64.zip -d Zalo/electron-v22.3.27-linux-x64
-    rm Zalo/electron-v22.3.27-linux-x64.zip
+    mkdir -p /tmp/zalo-installer
+    cp  -r ./en /tmp/zalo-installer
+    cp  -r ./vn /tmp/zalo-installer
+    cp  -r ./prepare /tmp/zalo-installer
+    cp -r ./Zalo /tmp/zalo-installer
+    wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P /tmp/zalo-installer/Zalo
+    unzip /tmp/zalo-installer/Zalo/electron-v22.3.27-linux-x64.zip -d /tmp/zalo-installer/Zalo/electron-v22.3.27-linux-x64
+    rm /tmp/zalo-installer/Zalo/electron-v22.3.27-linux-x64.zip
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Installed Electron v22.3.27!"
-        echo "Installing Zalo..."
     else
         echo "Đã cài đặt Electron v22.3.27!"
-        echo "Đang cài đặt Zalo..."
     fi
-    mkdir -p $HOME/.local/share/
     if [ "$LANGUAGE" == "EN" ]; then
-        rm ./Zalo/main.py
-        cp ./en/main.py ./Zalo/
+        cp /tmp/zalo-installer/en/main.py /tmp/zalo-installer/Zalo
     else
-        rm ./Zalo/main.py
-        cp ./vn/main.py ./Zalo/
+        cp /tmp/zalo-installer/vn/main.py /tmp/zalo-installer/Zalo
     fi
-    cp -r ./Zalo $HOME/.local/share/
-    sed -i "s|\$HOME|$HOME|g" "./prepare/Zalo.desktop"
-    cp -r ./prepare/Zalo.desktop $HOME/.local/share/applications
-    cp -r ./prepare/Zalo.desktop $HOME/Desktop
+    cp -r /tmp/zalo-installer/Zalo $HOME/.local/share/
+    sed -i "s|\$HOME|$HOME|g" "/tmp/zalo-installer/prepare/Zalo.desktop"
+    cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/.local/share/applications
+    cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/Desktop
+    rm -rf /tmp/zalo-installer
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Installed Zalo!"
     else
@@ -95,35 +101,41 @@ install_zalo() {
 }
 
 install_zalozadark() {
+    rm -rf /tmp/zalo-installer
+    if [ "$LANGUAGE" == "EN" ]; then
+        echo "Installing ZaloZaDark..."
+    else
+        echo "Đang cài đặt ZaloZaDark..."
+    fi
+    mkdir -p $HOME/.local/share/
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Installing Electron v22.3.27..."
     else
         echo "Đang cài đặt Electron v22.3.27..."
     fi
-    rm ZaloZaDark/electron-v22.3.27-linux-x64.zip
-    rm -rf ZaloZaDark/electron-v22.3.27-linux-x64
-    wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P ZaloZaDark
-    unzip ZaloZaDark/electron-v22.3.27-linux-x64.zip -d ZaloZaDark/electron-v22.3.27-linux-x64
-    rm ZaloZaDark/electron-v22.3.27-linux-x64.zip
+    mkdir -p /tmp/zalo-installer
+    cp  -r ./en /tmp/zalo-installer
+    cp  -r ./vn /tmp/zalo-installer
+    cp  -r ./prepare /tmp/zalo-installer
+    cp -r ./ZaloZaDark /tmp/zalo-installer
+    wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P /tmp/zalo-installer/ZaloZaDark
+    unzip /tmp/zalo-installer/ZaloZaDark/electron-v22.3.27-linux-x64.zip -d /tmp/zalo-installer/ZaloZaDark/electron-v22.3.27-linux-x64
+    rm /tmp/zalo-installer/ZaloZaDark/electron-v22.3.27-linux-x64.zip
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Installed Electron v22.3.27!"
-        echo "Installing ZaloZaDark..."
     else
         echo "Đã cài đặt Electron v22.3.27!"
-        echo "Đang cài đặt ZaloZaDark..."
     fi
-    mkdir -p $HOME/.local/share/
     if [ "$LANGUAGE" == "EN" ]; then
-        rm ./ZaloZaDark/main.py
-        cp ./en/main.py ./ZaloZaDark/
+        cp /tmp/zalo-installer/en/main.py /tmp/zalo-installer/ZaloZaDark
     else
-        rm ./ZaloZaDark/main.py
-        cp ./vn/main.py ./ZaloZaDark/
+        cp /tmp/zalo-installer/vn/main.py /tmp/zalo-installer/ZaloZaDark
     fi
-    cp -r ./ZaloZaDark $HOME/.local/share/Zalo
-    sed -i "s|\$HOME|$HOME|g" "./prepare/Zalo.desktop"
-    cp -r ./prepare/Zalo.desktop $HOME/.local/share/applications
-    cp -r ./prepare/Zalo.desktop $HOME/Desktop
+    cp -r /tmp/zalo-installer/ZaloZaDark $HOME/.local/share/Zalo
+    sed -i "s|\$HOME|$HOME|g" "/tmp/zalo-installer/prepare/Zalo.desktop"
+    cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/.local/share/applications
+    cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/Desktop
+    rm -rf /tmp/zalo-installer
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Installed ZaloZaDark!"
     else
@@ -143,9 +155,9 @@ install_dependencies() {
         echo 'Đang cài đặt các phụ thuộc...'
     fi
     if command_exists pip ; then
-        pip install pystray pillow
+        pip install pystray pillow --break-system-packages
     else
-        pip3 install pystray pillow
+        pip3 install pystray pillow --break-system-packages
     fi
     if [ "$LANGUAGE" == "EN" ]; then
         echo 'Installed dependencies!'
