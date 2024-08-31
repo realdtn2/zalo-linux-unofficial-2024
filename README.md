@@ -33,6 +33,7 @@ Working on Nobara 39 KDE Plasma,Ubuntu 22.04 XFCE4
 Python is required to run the tray icon script.
 
 To install Zalo for Linux, you can choose one of these two:
+
 ***Recommended***
 ```bash
 sh -c "$(curl -sSL https://raw.githubusercontent.com/realdtn2/zalo-linux-unofficial/main/install_curl.sh)"
