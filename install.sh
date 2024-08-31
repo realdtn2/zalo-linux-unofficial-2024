@@ -166,6 +166,8 @@ install_zalozadark() {
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/Desktop
     cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
     cp -r /tmp/zalo-installer/update.sh $HOME/.local/share/Zalo
+    cp -r /tmp/zalo-installer/update.sh $HOME/.local/share/Zalo
+    cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
     rm -rf /tmp/zalo-installer
     echo $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
     if [ "$LANGUAGE" == "EN" ]; then
