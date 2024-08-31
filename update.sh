@@ -150,6 +150,7 @@ update_zalozadark() {
     cp -r ./prepare /tmp/zalo-updater
     cp -r ./ZaloZaDark /tmp/zalo-updater
     cp -r ./version.txt /tmp/zalo-updater
+    cp -r ./update.sh /tmp/zalo-updater
     wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P /tmp/zalo-updater/ZaloZaDark
     unzip /tmp/zalo-updater/ZaloZaDark/electron-v22.3.27-linux-x64.zip -d /tmp/zalo-updater/ZaloZaDark/electron-v22.3.27-linux-x64
     rm /tmp/zalo-updater/ZaloZaDark/electron-v22.3.27-linux-x64.zip
