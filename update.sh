@@ -88,6 +88,7 @@ update_zalo() {
     cp -r ./prepare /tmp/zalo-updater
     cp -r ./Zalo /tmp/zalo-updater
     cp -r ./version.txt /tmp/zalo-updater
+    cp -r ./update.sh /tmp/zalo-updater
     wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P /tmp/zalo-updater/Zalo
     unzip /tmp/zalo-updater/Zalo/electron-v22.3.27-linux-x64.zip -d /tmp/zalo-updater/Zalo/electron-v22.3.27-linux-x64
     rm /tmp/zalo-updater/Zalo/electron-v22.3.27-linux-x64.zip
@@ -112,6 +113,8 @@ update_zalo() {
     fi
     cp -r /tmp/zalo-updater/prepare/Zalo.desktop $HOME/.local/share/applications
     cp -r /tmp/zalo-updater/prepare/Zalo.desktop $HOME/Desktop
+    cp -r /tmp/zalo-updater/version.txt $HOME/.local/share/Zalo
+    cp -r /tmp/zalo-updater/update.sh $HOME/.local/share/Zalo
     rm -rf /tmp/zalo-updater
     cp $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
     cp /tmp/zalo-updater/version.txt $HOME/.local/share/Zalo/version.txt
