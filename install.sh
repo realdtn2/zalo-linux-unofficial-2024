@@ -1,5 +1,4 @@
 #!/bin/bash
-
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 
 choose_language() {
@@ -69,11 +68,15 @@ install_zalo() {
     else
         echo "Đang cài đặt Electron v22.3.27..."
     fi
+    rm -rf ~/.local/share/Zalo
+    rm -rf $HOME/.local/share/applications/Zalo.desktop
+    rm -rf $HOME/Desktop/Zalo.desktop
     mkdir -p /tmp/zalo-installer
-    cp  -r ./en /tmp/zalo-installer
-    cp  -r ./vn /tmp/zalo-installer
-    cp  -r ./prepare /tmp/zalo-installer
+    cp -r ./en /tmp/zalo-installer
+    cp -r ./vn /tmp/zalo-installer
+    cp -r ./prepare /tmp/zalo-installer
     cp -r ./Zalo /tmp/zalo-installer
+    cp -r ./version.txt /tmp/zalo-installer
     wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P /tmp/zalo-installer/Zalo
     unzip /tmp/zalo-installer/Zalo/electron-v22.3.27-linux-x64.zip -d /tmp/zalo-installer/Zalo/electron-v22.3.27-linux-x64
     rm /tmp/zalo-installer/Zalo/electron-v22.3.27-linux-x64.zip
@@ -89,9 +92,18 @@ install_zalo() {
     fi
     cp -r /tmp/zalo-installer/Zalo $HOME/.local/share/
     sed -i "s|\$HOME|$HOME|g" "/tmp/zalo-installer/prepare/Zalo.desktop"
+    if [ "$LANGUAGE" == "EN" ]; then
+        sed -i "s|\$HOME|$HOME|g" "/tmp/zalo-installer/prepare/Update Zalo.desktop"
+        cp -r "/tmp/zalo-installer/prepare/Update Zalo.desktop" $HOME/.local/share/applications
+    else
+        sed -i "s|\$HOME|$HOME|g" "/tmp/zalo-installer/prepare/Cập Nhật Zalo.desktop"
+        cp -r "/tmp/zalo-installer/prepare/Cập Nhật Zalo.desktop" $HOME/.local/share/applications
+    fi
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/.local/share/applications
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/Desktop
     rm -rf /tmp/zalo-installer
+    cat $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
+    cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Installed Zalo!"
     else
@@ -113,11 +125,17 @@ install_zalozadark() {
     else
         echo "Đang cài đặt Electron v22.3.27..."
     fi
+    rm -rf ~/.local/share/Zalo
+    rm -rf $HOME/.local/share/applications/Zalo.desktop
+    rm -rf "$HOME/.local/share/applications/Cập Nhật Zalo.desktop"
+    rm -rf "$HOME/.local/share/applications/Update Zalo.desktop"
+    rm -rf $HOME/Desktop/Zalo.desktop
     mkdir -p /tmp/zalo-installer
-    cp  -r ./en /tmp/zalo-installer
-    cp  -r ./vn /tmp/zalo-installer
-    cp  -r ./prepare /tmp/zalo-installer
+    cp -r ./en /tmp/zalo-installer
+    cp -r ./vn /tmp/zalo-installer
+    cp -r ./prepare /tmp/zalo-installer
     cp -r ./ZaloZaDark /tmp/zalo-installer
+    cp -r ./version.txt /tmp/zalo-installer
     wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P /tmp/zalo-installer/ZaloZaDark
     unzip /tmp/zalo-installer/ZaloZaDark/electron-v22.3.27-linux-x64.zip -d /tmp/zalo-installer/ZaloZaDark/electron-v22.3.27-linux-x64
     rm /tmp/zalo-installer/ZaloZaDark/electron-v22.3.27-linux-x64.zip
@@ -133,15 +151,25 @@ install_zalozadark() {
     fi
     cp -r /tmp/zalo-installer/ZaloZaDark $HOME/.local/share/Zalo
     sed -i "s|\$HOME|$HOME|g" "/tmp/zalo-installer/prepare/Zalo.desktop"
+    if [ "$LANGUAGE" == "EN" ]; then
+        sed -i "s|\$HOME|$HOME|g" "/tmp/zalo-installer/prepare/Update Zalo.desktop"
+        cp -r "/tmp/zalo-installer/prepare/Update Zalo.desktop" $HOME/.local/share/applications
+    else
+        sed -i "s|\$HOME|$HOME|g" "/tmp/zalo-installer/prepare/Cập Nhật Zalo.desktop"
+        cp -r "/tmp/zalo-installer/prepare/Cập Nhật Zalo.desktop" $HOME/.local/share/applications
+    fi
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/.local/share/applications
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/Desktop
     rm -rf /tmp/zalo-installer
+    cat $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
+    cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Installed ZaloZaDark!"
     else
         echo "Đã cài đặt ZaloZaDark!"
     fi
     exit 1
+
 }
 
 command_exists() {

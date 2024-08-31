@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=
+Name=Update Zalo
+Exec=bash $HOME/.local/share/Zalo/update.sh
+Icon=$HOME/.local/share/Zalo/assets/Zalo.png
+Terminal=true
+Type=Application
+
