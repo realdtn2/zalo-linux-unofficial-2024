@@ -77,6 +77,7 @@ install_zalo() {
     cp -r ./prepare /tmp/zalo-installer
     cp -r ./Zalo /tmp/zalo-installer
     cp -r ./version.txt /tmp/zalo-installer
+    cp -r ./update.sh /tmp/zalo-installer
     wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P /tmp/zalo-installer/Zalo
     unzip /tmp/zalo-installer/Zalo/electron-v22.3.27-linux-x64.zip -d /tmp/zalo-installer/Zalo/electron-v22.3.27-linux-x64
     rm /tmp/zalo-installer/Zalo/electron-v22.3.27-linux-x64.zip
@@ -101,6 +102,7 @@ install_zalo() {
     fi
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/.local/share/applications
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/Desktop
+    cp -r /tmp/zalo-installer/update.sh $HOME/.local/share/Zalo
     cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
     rm -rf /tmp/zalo-installer
     echo $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
@@ -137,6 +139,7 @@ install_zalozadark() {
     cp -r ./prepare /tmp/zalo-installer
     cp -r ./ZaloZaDark /tmp/zalo-installer
     cp -r ./version.txt /tmp/zalo-installer
+    cp -r ./update.sh /tmp/zalo-installer
     wget https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-x64.zip -P /tmp/zalo-installer/ZaloZaDark
     unzip /tmp/zalo-installer/ZaloZaDark/electron-v22.3.27-linux-x64.zip -d /tmp/zalo-installer/ZaloZaDark/electron-v22.3.27-linux-x64
     rm /tmp/zalo-installer/ZaloZaDark/electron-v22.3.27-linux-x64.zip
@@ -162,6 +165,7 @@ install_zalozadark() {
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/.local/share/applications
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/Desktop
     cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
+    cp -r /tmp/zalo-installer/update.sh $HOME/.local/share/Zalo
     rm -rf /tmp/zalo-installer
     echo $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
     if [ "$LANGUAGE" == "EN" ]; then
