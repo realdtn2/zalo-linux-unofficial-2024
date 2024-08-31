@@ -106,7 +106,6 @@ install_zalo() {
     cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
     rm -rf /tmp/zalo-installer
     echo $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
-    cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Installed Zalo!"
     else
