@@ -1,6 +1,10 @@
 #!/bin/bash
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 
+mkdir /tmp/zalo-update
+git clone https://github.com/realdtn2/zalo-linux-unofficial /tmp/zalo-update
+cd /tmp/zalo-update
+
 LANGUAGE=$(cat $HOME/.local/share/Zalo/lang.txt 2>/dev/null)
 if [ "$LANGUAGE" != "EN" ] && [ "$LANGUAGE" != "VI" ]; then
     LANGUAGE="EN"
