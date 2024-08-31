@@ -111,6 +111,7 @@ install_zalo() {
     else
         echo "Đã cài đặt Zalo!"
     fi
+    sleep 1
     exit 1
 }
 
@@ -172,6 +173,7 @@ install_zalozadark() {
     else
         echo "Đã cài đặt ZaloZaDark!"
     fi
+    sleep 1
     exit 1
 
 }

@@ -123,6 +123,7 @@ update_zalo() {
     else
         echo "Đã cập nhật Zalo!"
     fi
+    sleep 1
     exit 1
 }
 
@@ -185,6 +186,7 @@ update_zalozadark() {
     else
         echo "Đã cập nhật ZaloZaDark!"
     fi
+    sleep 1
     exit 1
 }
 
