@@ -101,6 +101,7 @@ install_zalo() {
     fi
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/.local/share/applications
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/Desktop
+    cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
     rm -rf /tmp/zalo-installer
     echo $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
     cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
@@ -160,9 +161,9 @@ install_zalozadark() {
     fi
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/.local/share/applications
     cp -r /tmp/zalo-installer/prepare/Zalo.desktop $HOME/Desktop
+    cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
     rm -rf /tmp/zalo-installer
     echo $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
-    cp /tmp/zalo-installer/version.txt $HOME/.local/share/Zalo/version.txt
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Installed ZaloZaDark!"
     else
