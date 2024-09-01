@@ -5,4 +5,3 @@ Exec=bash $HOME/.local/share/Zalo/start.sh
 Icon=$HOME/.local/share/Zalo/assets/Zalo.png
 Terminal=false
 Type=Application
-Version=24.8.4
