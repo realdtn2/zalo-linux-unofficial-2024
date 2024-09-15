@@ -1,7 +1,7 @@
 {
   "name": "Zalo",
   "homepage": "https://zalo.me/",
-  "version": "24.8.4",
+  "version": "24.9.1",
   "description": "Zalo - Nhắn gửi yêu thương",
   "engines": {
     "npm": ">=3"
@@ -28,7 +28,8 @@
     "@sentry/electron": "4.8.0",
     "@sentry/react": "6.2.4",
     "@tensorflow/tfjs": "0.15.3",
-    "adm-zip": "0.4.13",
+    "@types/generic-pool": "3.1.9",
+    "adm-zip": "0.4.16",
     "ajv": "5.2.2",
     "archiver": "^5.3.1",
     "auto-launch": "^5.0.1",
