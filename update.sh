@@ -115,9 +115,9 @@ update_zalo() {
     cp -r /tmp/zalo-updater/prepare/Zalo.desktop $HOME/Desktop
     cp -r /tmp/zalo-updater/version.txt $HOME/.local/share/Zalo
     cp -r /tmp/zalo-updater/update.sh $HOME/.local/share/Zalo
-    rm -rf /tmp/zalo-updater
-    cp $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
     cp /tmp/zalo-updater/version.txt $HOME/.local/share/Zalo/version.txt
+    rm -rf /tmp/zalo-updater
+    echo $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Updated Zalo!"
     else
@@ -178,9 +178,9 @@ update_zalozadark() {
     cp -r /tmp/zalo-updater/prepare/Zalo.desktop $HOME/Desktop
     cp -r /tmp/zalo-updater/version.txt $HOME/.local/share/Zalo
     cp -r /tmp/zalo-updater/update.sh $HOME/.local/share/Zalo
-    rm -rf /tmp/zalo-updater
-    cp $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
     cp /tmp/zalo-updater/version.txt $HOME/.local/share/Zalo/version.txt
+    rm -rf /tmp/zalo-updater
+    echo $LANGUAGE > $HOME/.local/share/Zalo/lang.txt
     if [ "$LANGUAGE" == "EN" ]; then
         echo "Updated ZaloZaDark!"
     else
